@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SoftuniCoffeeOrders", "01.SoftuniCoffeeOrders\01.SoftuniCoffeeOrders.csproj", "{1B63FDDC-F3AB-48AF-A7DF-D76002F7AE95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.RageQuit", "03.RageQuit\03.RageQuit.csproj", "{8BBCF682-E7A1-4D07-AD7B-16F7CC20950D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Files", "04.Files\04.Files.csproj", "{2C30897F-F866-4EEE-8516-D0F676D6E4F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B63FDDC-F3AB-48AF-A7DF-D76002F7AE95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B63FDDC-F3AB-48AF-A7DF-D76002F7AE95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B63FDDC-F3AB-48AF-A7DF-D76002F7AE95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B63FDDC-F3AB-48AF-A7DF-D76002F7AE95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BBCF682-E7A1-4D07-AD7B-16F7CC20950D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBCF682-E7A1-4D07-AD7B-16F7CC20950D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BBCF682-E7A1-4D07-AD7B-16F7CC20950D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BBCF682-E7A1-4D07-AD7B-16F7CC20950D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C30897F-F866-4EEE-8516-D0F676D6E4F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C30897F-F866-4EEE-8516-D0F676D6E4F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C30897F-F866-4EEE-8516-D0F676D6E4F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C30897F-F866-4EEE-8516-D0F676D6E4F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
