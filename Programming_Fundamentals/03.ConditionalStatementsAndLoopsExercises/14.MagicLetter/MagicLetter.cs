@@ -2,27 +2,27 @@
 
 namespace _14.MagicLetter
 {
-    class MagicLetter
+    public class MagicLetter
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             var firstLetter = char.Parse(Console.ReadLine());
             var secondLetter = char.Parse(Console.ReadLine());
             var magicLetter = char.Parse(Console.ReadLine());
 
-            for (char i = firstLetter; i <= secondLetter; i++)
+            for (char firstIndex = firstLetter; firstIndex <= secondLetter; firstIndex++)
             {
-                for (char j = firstLetter; j <= secondLetter; j++)
+                for (char secondIndex = firstLetter; secondIndex <= secondLetter; secondIndex++)
                 {
-                    for (char k = firstLetter; k <= secondLetter; k++)
+                    for (char thirdIndex = firstLetter; thirdIndex <= secondLetter; thirdIndex++)
                     {
-                        if (i == magicLetter || j == magicLetter || k == magicLetter)
+                        var indexIsEqualToMagicLetter = firstIndex == magicLetter 
+                            || secondIndex == magicLetter 
+                            || thirdIndex == magicLetter;
+
+                        if (!indexIsEqualToMagicLetter)
                         {
-                            continue;
-                        }
-                        else
-                        {
-                            Console.Write($"{i}{j}{k} ");
+                            Console.Write($"{firstIndex}{secondIndex}{thirdIndex} ");
                         }
                     }
                 }

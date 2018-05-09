@@ -2,11 +2,13 @@
 
 namespace _01.Passed
 {
-    class Passed
+    public class Passed
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            if (double.Parse(Console.ReadLine()) >= 3.00)
+            var inputGrade = double.Parse(Console.ReadLine());
+
+            if (inputGrade >= 3.00)
             {
                 Console.WriteLine("Passed!");
             }

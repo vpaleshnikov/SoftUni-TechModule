@@ -2,31 +2,27 @@
 
 namespace _05.WordInPlural
 {
-    class WordInPlural
+    public class WordInPlural
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            var input = Console.ReadLine();
+            var inputWord = Console.ReadLine();
 
-            if (input.EndsWith("y"))
+            if (inputWord.EndsWith("y"))
             {
-                input = input.Remove(input.Length - 1);
-                input += "ies";
+                inputWord = inputWord.Remove(inputWord.Length - 1);
+                inputWord += "ies";
             }
-            else if (input.EndsWith("o")
-                || input.EndsWith("ch")
-                || input.EndsWith("s")
-                || input.EndsWith("sh")
-                || input.EndsWith("x")
-                || input.EndsWith("z"))
+            else if (inputWord.EndsWith("o") || inputWord.EndsWith("ch") || inputWord.EndsWith("s")
+                || inputWord.EndsWith("sh") || inputWord.EndsWith("x") || inputWord.EndsWith("z"))
             {
-                input += "es";
+                inputWord += "es";
             }
             else
             {
-                input += "s";
+                inputWord += "s";
             }
-            Console.WriteLine(input);
+            Console.WriteLine(inputWord);
         }
     }
 }

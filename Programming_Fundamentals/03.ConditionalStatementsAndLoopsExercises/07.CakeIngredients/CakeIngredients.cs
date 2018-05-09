@@ -2,18 +2,17 @@
 
 namespace _07.CakeIngredients
 {
-    class CakeIngredients
+    public class CakeIngredients
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            var input = Console.ReadLine();
+            string ingridient;
             var ingridientCounter = 0;
-            while (input != "Bake!")
-            {
-                ingridientCounter++;
-                Console.WriteLine($"Adding ingredient {input}.");
 
-                input = Console.ReadLine();
+            while ((ingridient = Console.ReadLine()) != "Bake!")
+            {
+                Console.WriteLine($"Adding ingredient {ingridient}.");
+                ingridientCounter++;
             }
             Console.WriteLine($"Preparing cake with {ingridientCounter} ingredients.");
         }

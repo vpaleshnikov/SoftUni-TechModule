@@ -2,9 +2,9 @@
 
 namespace _08.SMSTyping
 {
-    class SMSTyping
+    public class SMSTyping
     {
-        static void Main()
+        public static void Main()
         {
             var n = int.Parse(Console.ReadLine());
 
@@ -18,7 +18,7 @@ namespace _08.SMSTyping
                         break;
                     case 2:
                         Console.Write("a");
-                        break; 
+                        break;
                     case 22:
                         Console.Write("b");
                         break;

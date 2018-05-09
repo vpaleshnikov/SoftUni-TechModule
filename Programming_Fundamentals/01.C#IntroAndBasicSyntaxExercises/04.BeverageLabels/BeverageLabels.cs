@@ -1,18 +1,21 @@
-﻿    using System;
+﻿using System;
 
-    namespace _04.BeverageLabels
+namespace _04.BeverageLabels
+{
+    public class BeverageLabels
     {
-        class BeverageLabels
+        public static void Main()
         {
-            static void Main(string[] args)
-            {
-                var name = Console.ReadLine();
-                var volume = int.Parse(Console.ReadLine());
-                var energyContent = double.Parse(Console.ReadLine()) * volume / 100;
-                var sugarContent = double.Parse(Console.ReadLine()) * volume / 100;
+            var name = Console.ReadLine();
+            var volume = int.Parse(Console.ReadLine());
+            var energyContentPer100ml = double.Parse(Console.ReadLine());
+            var sugarContentPer100ml = double.Parse(Console.ReadLine());
 
-                Console.WriteLine($"{volume}ml {name}:");
-                Console.WriteLine($"{energyContent}kcal, {sugarContent}g sugars");
-            }
+            var energyContentResult = energyContentPer100ml * volume / 100;
+            var sugarContentResult = sugarContentPer100ml * volume / 100;
+
+            Console.WriteLine($"{volume}ml {name}:");
+            Console.WriteLine($"{energyContentResult}kcal, {sugarContentResult}g sugars");
         }
     }
+}

@@ -2,11 +2,16 @@
 
 namespace _02.RectangleArea
 {
-    class RectangleArea
+    public class RectangleArea
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.WriteLine($"{(double.Parse(Console.ReadLine()) * double.Parse(Console.ReadLine())):F2}");
+            var width = double.Parse(Console.ReadLine());
+            var height = double.Parse(Console.ReadLine());
+
+            var rectangleArea = width * height;
+
+            Console.WriteLine($"{rectangleArea:F2}");
         }
     }
 }

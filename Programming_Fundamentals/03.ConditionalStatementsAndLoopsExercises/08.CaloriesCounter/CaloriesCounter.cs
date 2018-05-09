@@ -2,33 +2,33 @@
 
 namespace _08.CaloriesCounter
 {
-    class CaloriesCounter
+    public class CaloriesCounter
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             int numberOfIngridients = int.Parse(Console.ReadLine());
-            var calories = 0;
+
+            var totalCalories = 0;
+
             for (int i = 0; i < numberOfIngridients; i++)
             {
-                var ingridients = Console.ReadLine().ToLower();
-                if (ingridients == "cheese")
-                {
-                    calories += 500;
-                }
-                else if (ingridients == "tomato sauce")
-                {
-                    calories += 150;
-                }
-                else if (ingridients == "salami")
-                {
-                    calories += 600;
-                }
-                else if (ingridients == "pepper")
-                {
-                    calories += 50;
-                }
+                var ingridient = Console.ReadLine().ToLower();
+
+                var ingridientIsCheese = ingridient == "cheese";
+                var ingridientsIsTomatoSauce = ingridient == "tomato sauce";
+                var ingridientIsSalami = ingridient == "salami";
+                var ingridientIsPepper = ingridient == "pepper";
+
+                if (ingridientIsCheese) { totalCalories += 500; }
+
+                else if (ingridientsIsTomatoSauce) { totalCalories += 150; }
+
+                else if (ingridientIsSalami) { totalCalories += 600; }
+
+                else if (ingridientIsPepper) { totalCalories += 50; }
             }
-            Console.WriteLine($"Total calories: {calories}");
+
+            Console.WriteLine($"Total calories: {totalCalories}");
         }
     }
 }

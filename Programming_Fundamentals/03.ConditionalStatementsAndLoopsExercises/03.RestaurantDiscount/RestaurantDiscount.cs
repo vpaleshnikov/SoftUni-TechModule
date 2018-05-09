@@ -2,59 +2,45 @@
 
 namespace _03.RestaurantDiscount
 {
-    class RestaurantDiscount
+    public class RestaurantDiscount
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            var groupSize = int.Parse(Console.ReadLine());
-            var package = Console.ReadLine().ToLower();
+            var groupSizeInput = int.Parse(Console.ReadLine());
+            var packageInput = Console.ReadLine().ToLower();
 
             var hall = String.Empty;
             var price = 0.00;
 
-            if (groupSize > 0 && groupSize <= 50)
-            {
-                hall = "Small Hall";
-                price = 2500;
-            }
-            else if (groupSize > 50 && groupSize <= 100)
-            {
-                hall = "Terrace";
-                price = 5000;
-            }
-            else if (groupSize > 100 && groupSize <= 120)
-            {
-                hall = "Great Hall";
-                price = 7500;
-            }
-            else if (groupSize > 120)
-            {
-                Console.WriteLine("We do not have an appropriate hall.");
-                return;
-            }
-            
+            var isSmallHall = groupSizeInput > 0 && groupSizeInput <= 50;
+            var isTerrace = groupSizeInput > 50 && groupSizeInput <= 100;
+            var isGreatHall = groupSizeInput > 100 && groupSizeInput <= 120;
+            var isInvalidHall = groupSizeInput > 120;
+
+            if (isSmallHall) { hall = "Small Hall"; price = 2500; }
+
+            else if (isTerrace) { hall = "Terrace"; price = 5000; }
+
+            else if (isGreatHall) { hall = "Great Hall"; price = 7500; }
+
+            else if (isInvalidHall) { Console.WriteLine("We do not have an appropriate hall."); return; }
+
             var packagePrice = 0.00;
             var discount = 0.00;
 
-            if (package == "normal")
-            {
-                packagePrice = 500;
-                discount = 0.05;
-            }
-            else if (package == "gold")
-            {
-                packagePrice = 750;
-                discount = 0.10;
-            }
-            else if (package == "platinum")
-            {
-                packagePrice = 1000;
-                discount = 0.15;
-            }
+            var isNormalPackage = packageInput == "normal";
+            var isGoldPackage = packageInput == "gold";
+            var isPlatinumPackage = packageInput == "platinum";
 
-            var totalPrice = price + packagePrice;
-            var discountedPrice = totalPrice - (totalPrice * discount);
-            var pricePerPerson = discountedPrice / groupSize;
+            if (isNormalPackage) { packagePrice = 500; discount = 0.05; }
+
+            else if (isGoldPackage) { packagePrice = 750; discount = 0.10; }
+
+            else if (isPlatinumPackage) { packagePrice = 1000; discount = 0.15; }
+
+            var totalPriceBeforeDiscount = price + packagePrice;
+            var discountedPrice = totalPriceBeforeDiscount - (totalPriceBeforeDiscount * discount);
+            var pricePerPerson = discountedPrice / groupSizeInput;
 
             Console.WriteLine($"We can offer you the {hall}");
             Console.WriteLine($"The price per person is {pricePerPerson:F2}$");

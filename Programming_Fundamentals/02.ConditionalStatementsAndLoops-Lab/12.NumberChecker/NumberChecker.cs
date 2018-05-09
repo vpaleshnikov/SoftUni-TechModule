@@ -2,21 +2,17 @@
 
 namespace _12.NumberChecker
 {
-    class NumberChecker
+    public class NumberChecker
     {
-        static void Main()
+        public static void Main()
         {
             var input = Console.ReadLine();
-            int number;
 
-            if (int.TryParse(input, out number))
-            {
-                Console.WriteLine("It is a number.");
-            }
-            else
-            {
-                Console.WriteLine("Invalid input!");
-            }
+            var result = int.TryParse(input, out var number)
+                ? "It is a number."
+                : "Invalid input!";
+
+            Console.WriteLine(result);
         }
     }
 }

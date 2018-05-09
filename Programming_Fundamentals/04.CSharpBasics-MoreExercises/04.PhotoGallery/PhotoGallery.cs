@@ -2,9 +2,9 @@
 
 namespace _04.PhotoGallery
 {
-    class PhotoGallery
+    public class PhotoGallery
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             var photoNumber = int.Parse(Console.ReadLine());
             var day = int.Parse(Console.ReadLine());
@@ -18,6 +18,7 @@ namespace _04.PhotoGallery
 
             Console.WriteLine($"Name: DSC_{photoNumber:D4}.jpg");
             Console.WriteLine($"Date Taken: {day:D2}/{month:D2}/{year:D4} {hours:D2}:{minutes:D2}");
+            
             if (sizeInBytes >= 1000 && sizeInBytes < 1000000)
             {
                 sizeInBytes = sizeInBytes / 1000;
@@ -32,6 +33,7 @@ namespace _04.PhotoGallery
             {
                 Console.WriteLine($"Size: {sizeInBytes}B");
             }
+
             if (width > height)
             {
                 Console.WriteLine($"Resolution: {width}x{height} (landscape)");

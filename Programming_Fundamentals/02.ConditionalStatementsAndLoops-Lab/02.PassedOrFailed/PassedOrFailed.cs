@@ -2,18 +2,18 @@
 
 namespace _02.PassedOrFailed
 {
-    class PassedOrFailed
+    public class PassedOrFailed
     {
-        static void Main()
+        public static void Main()
         {
-            if (double.Parse(Console.ReadLine()) >= 3.00)
-            {
-                Console.WriteLine("Passed!");
-            }
-            else
-            {
-                Console.WriteLine("Failed!");
-            }
+            var inputGrade = double.Parse(Console.ReadLine());
+
+            var passed = "Passed!";
+            var failed = "Failed!";
+
+            var isPassed = inputGrade >= 3.00 ? passed : failed;
+
+            Console.WriteLine(isPassed);
         }
     }
 }

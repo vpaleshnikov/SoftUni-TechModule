@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.ForeignLanguages", "05.F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.TheatrePromotion", "06.TheatrePromotion\06.TheatrePromotion.csproj", "{0D16645D-78A3-4EF0-AD8F-4BCBD25DA25A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.DivisibleBy3", "07.DivisibleBy3\07.DivisibleBy3.csproj", "{14515510-CFA4-4415-B808-3A02D7B18044}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.DivisibleByThree", "07.DivisibleBy3\07.DivisibleByThree.csproj", "{14515510-CFA4-4415-B808-3A02D7B18044}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.SumOfOddNumbers", "08.SumOfOddNumbers\08.SumOfOddNumbers.csproj", "{FB68E48A-4385-4362-A752-B6D33AE489FA}"
 EndProject
@@ -84,5 +84,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACB92C1D-CA19-4038-952A-D2B8E0D89153}
 	EndGlobalSection
 EndGlobal

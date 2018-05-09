@@ -2,44 +2,40 @@
 
 namespace _13.GameOfNumbers
 {
-    class GameOfNumbers
+    public class GameOfNumbers
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            var n = int.Parse(Console.ReadLine());
-            var m = int.Parse(Console.ReadLine());
+            var firstNumberInput = int.Parse(Console.ReadLine());
+            var secondNumberInput = int.Parse(Console.ReadLine());
             var magicNumber = int.Parse(Console.ReadLine());
 
-            var combinationCount = 0;
-            int i = 0;
-            int j = 0;
+            var combinationsCount = 0;
+
+            var firstIndex = 0;
+            var secondIndex = 0;
             var sum = 0;
             var isFound = false;
 
-            for (i = m; i >= n; i--)
+            for (firstIndex = secondNumberInput; firstIndex >= firstNumberInput; firstIndex--)
             {
-                for (j = m; j >= n; j--)
+                for (secondIndex = secondNumberInput; secondIndex >= firstNumberInput; secondIndex--)
                 {
-                    combinationCount++;
-                    sum = i + j;
+                    combinationsCount++;
+                    sum = firstIndex + secondIndex;
+
                     if (sum == magicNumber)
                     {
                         isFound = true;
-                        break;
+                        Console.WriteLine($"Number found! {firstIndex} + {secondIndex} = {sum}");
+                        return;
                     }
                 }
-                if (sum == magicNumber)
-                {
-                    break;
-                }
             }
-            if (isFound == true)
+
+            if (!isFound)
             {
-                Console.WriteLine($"Number found! {i} + {j} = {sum}");
-            }
-            else
-            {
-                Console.WriteLine($"{combinationCount} combinations - neither equals {magicNumber}");
+                Console.WriteLine($"{combinationsCount} combinations - neither equals {magicNumber}");
             }
         }
     }

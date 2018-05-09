@@ -2,11 +2,16 @@
 
 namespace _03.MilesToKilometers
 {
-    class MilesToKilometers
+    public class MilesToKilometers
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.WriteLine($"{(double.Parse(Console.ReadLine())) * 1.60934:F2}");
+            var inputMiles = double.Parse(Console.ReadLine());
+            var mileMultiplier = 1.60934;
+
+            var milesInKilometers = inputMiles * mileMultiplier;
+
+            Console.WriteLine($"{milesInKilometers:F2}");
         }
     }
 }

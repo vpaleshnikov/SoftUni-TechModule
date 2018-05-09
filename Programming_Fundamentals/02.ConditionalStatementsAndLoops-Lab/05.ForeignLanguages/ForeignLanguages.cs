@@ -2,24 +2,28 @@
 
 namespace _05.ForeignLanguages
 {
-    class ForeignLanguages
+    public class ForeignLanguages
     {
-        static void Main()
+        public static void Main()
         {
-            var country = Console.ReadLine().ToLower();
+            var countryInput = Console.ReadLine().ToLower();
 
-            if (country == "england" || country == "usa")
+            var language = string.Empty;
+
+            if (countryInput == "england" || countryInput == "usa")
             {
-                Console.WriteLine("English");
+                language = "English";
             }
-            else if (country == "spain" || country == "argentina" || country == "mexico")
+            else if (countryInput == "spain" || countryInput == "argentina" || countryInput == "mexico")
             {
-                Console.WriteLine("Spanish");
+                language = "Spanish";
             }
             else
             {
-                Console.WriteLine("unknown");
+                language = "unknown";
             }
+
+            Console.WriteLine(language);
         }
     }
 }

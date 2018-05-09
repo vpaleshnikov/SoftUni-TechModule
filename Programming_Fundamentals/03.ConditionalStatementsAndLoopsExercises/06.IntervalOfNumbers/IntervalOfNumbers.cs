@@ -2,17 +2,17 @@
 
 namespace _06.IntervalOfNumbers
 {
-    class IntervalOfNumbers
+    public class IntervalOfNumbers
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            var firstNumber = int.Parse(Console.ReadLine());
-            var secondNumber = int.Parse(Console.ReadLine());
+            var firstInputNumber = int.Parse(Console.ReadLine());
+            var secondInputNumber = int.Parse(Console.ReadLine());
 
-            var min = Math.Min(firstNumber, secondNumber);
-            var max = Math.Max(firstNumber, secondNumber);
+            var start = Math.Min(firstInputNumber, secondInputNumber);
+            var end = Math.Max(firstInputNumber, secondInputNumber);
 
-            for (int i = min; i <= max; i++)
+            for (int i = start; i <= end; i++)
             {
                 Console.WriteLine(i);
             }

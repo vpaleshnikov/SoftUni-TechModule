@@ -2,9 +2,9 @@
 
 namespace _03.Megapixels
 {
-    class Megapixels
+   public class Megapixels
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             var width = double.Parse(Console.ReadLine());
             var height = double.Parse(Console.ReadLine());

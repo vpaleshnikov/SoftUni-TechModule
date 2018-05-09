@@ -2,25 +2,28 @@
 
 namespace _10.MultiplicationTable2
 {
-    class MultiplicationTable2
+    public class MultiplicationTable2
     {
-        static void Main()
+        public static void Main()
         {
-            var number = int.Parse(Console.ReadLine());
-            var loops = int.Parse(Console.ReadLine());
+            var numberInput = int.Parse(Console.ReadLine());
+            var multiplierInput = int.Parse(Console.ReadLine());
+
             var sum = 0;
 
-            if (loops > 10)
+            if (multiplierInput > 10)
             {
-                sum = number * loops;
-                Console.WriteLine($"{number} X {loops} = {sum}");
+                sum = numberInput * multiplierInput;
+                var result = $"{numberInput} X {multiplierInput} = {sum}";
+                Console.WriteLine(result);
             }
             else
             {
-                for (int i = loops; i <= 10; i++)
+                for (int i = multiplierInput; i <= 10; i++)
                 {
-                    sum = i * number;
-                    Console.WriteLine($"{number} X {i} = {sum}");
+                    sum = numberInput * i;
+                    var result = $"{numberInput} X {i} = {sum}";
+                    Console.WriteLine(result);
                 }
             }
         }

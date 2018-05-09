@@ -2,21 +2,23 @@
 
 namespace _08.SumOfOddNumbers
 {
-    class SumOfOddNumbers
+    public class SumOfOddNumbers
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             var count = int.Parse(Console.ReadLine());
             var sum = 0;
 
-            for (int i = 1; i <= count * 2; i++)
+            for (int i = 1; i <= count; i++)
             {
                 if (i % 2 != 0)
                 {
                     Console.WriteLine(i);
                     sum += i;
+                    count++;
                 }
             }
+
             Console.WriteLine($"Sum: {sum}");
         }
     }

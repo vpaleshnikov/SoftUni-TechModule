@@ -2,44 +2,35 @@
 
 namespace _12.TestNumbers
 {
-    class TestNumbers
+    public class TestNumbers
     {
-        static void Main()
+        public static void Main()
         {
-            var n = int.Parse(Console.ReadLine());
-            var m = int.Parse(Console.ReadLine());
+            var firstNumberInput = int.Parse(Console.ReadLine());
+            var secondNumberInput = int.Parse(Console.ReadLine());
             var maxSum = int.Parse(Console.ReadLine());
 
             var sum = 0;
             var countOfCombinations = 0;
 
-            for (int i = n; i >= 1; i--)
+            for (int firstIndex = firstNumberInput; firstIndex >= 1; firstIndex--)
             {
-                for (int j = 1; j <= m; j++)
+                for (int secondIndex = 1; secondIndex <= secondNumberInput; secondIndex++)
                 {
                     countOfCombinations++;
-                    sum += (i * j) * 3;
-                    if (sum >= maxSum)
-                    {
-                        
-                        break;
-                    }
+
+                    sum += (firstIndex * secondIndex) * 3;
+
+                    if (sum >= maxSum) { break; }
                 }
-                if (sum >= maxSum)
-                {
-                    break;
-                }
+                if (sum >= maxSum) { break; }
             }
-            if (sum >= maxSum)
-            {
-                Console.WriteLine(countOfCombinations + " combinations");
-                Console.WriteLine($"Sum: {sum} >= {maxSum}");
-            }
-            else
-            {
-                Console.WriteLine(countOfCombinations + " combinations");
-                Console.WriteLine("Sum: " + sum);
-            }
+
+            Console.WriteLine($"{countOfCombinations} combinations");
+
+            if (sum >= maxSum) { Console.WriteLine($"Sum: {sum} >= {maxSum}"); }
+
+            else { Console.WriteLine($"Sum: {sum}"); }
         }
     }
 }

@@ -2,13 +2,13 @@
 
 namespace _10.TriangleOfNumbers
 {
-    class TriangleOfNumbers
+    public class TriangleOfNumbers
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            var number = int.Parse(Console.ReadLine());
+            var countOfRows = int.Parse(Console.ReadLine());
 
-            for (int row = 1; row <= number; row++)
+            for (int row = 1; row <= countOfRows; row++)
             {
                 for (int col = 1; col <= row; col++)
                 {

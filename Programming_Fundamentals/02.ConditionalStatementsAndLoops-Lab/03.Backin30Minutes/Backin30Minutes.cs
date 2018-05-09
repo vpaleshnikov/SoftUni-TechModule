@@ -2,13 +2,12 @@
 
 namespace _03.Backin30Minutes
 {
-    class Backin30Minutes
+    public class Backin30Minutes
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             int hours = int.Parse(Console.ReadLine());
             int minutes = int.Parse(Console.ReadLine()) + 30;
-
             
             if (minutes > 59)
             {

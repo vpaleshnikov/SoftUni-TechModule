@@ -2,29 +2,25 @@
 
 namespace _01.ChooseADrink
 {
-    class ChooseADrink
+    public class ChooseADrink
     {
-        static void Main()
+        public static void Main()
         {
-            var profession = Console.ReadLine().ToLower();
+            var professionInput = Console.ReadLine().ToLower();
             var drink = String.Empty;
 
-            if (profession == "athlete")
-            {
-                drink = "Water";
-            }
-            else if (profession == "businessman" || profession == "businesswoman")
-            {
-                drink = "Coffee";
-            }
-            else if (profession == "softuni student")
-            {
-                drink = "Beer";
-            }
-            else
-            {
-                drink = "Tea";
-            }
+            var isAthlete = professionInput == "athlete";
+            var isBusinessType = professionInput == "businessman" || professionInput == "businesswoman";
+            var isSoftUniStudent = professionInput == "softuni student";
+
+            if (isAthlete) { drink = "Water"; }
+
+            else if (isBusinessType) { drink = "Coffee"; }
+
+            else if (isSoftUniStudent) { drink = "Beer"; }
+
+            else { drink = "Tea"; }
+
             Console.WriteLine(drink);
         }
     }

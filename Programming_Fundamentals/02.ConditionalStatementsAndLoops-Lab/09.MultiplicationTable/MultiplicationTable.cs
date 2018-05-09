@@ -2,17 +2,19 @@
 
 namespace _09.MultiplicationTable
 {
-    class MultiplicationTable
+    public class MultiplicationTable
     {
-        static void Main()
+        public static void Main()
         {
-            var number = int.Parse(Console.ReadLine());
+            var numberInput = int.Parse(Console.ReadLine());
             var sum = 0;
 
             for (int i = 1; i <= 10; i++)
             {
-                sum = i * number;
-                Console.WriteLine($"{number} X {i} = {sum}");
+                sum = i * numberInput;
+                var result = $"{numberInput} X {i} = {sum}";
+
+                Console.WriteLine(result);
             }
         }
     }

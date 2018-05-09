@@ -2,17 +2,16 @@
 
 namespace _02.VaporStore
 {
-    class VaporStore
+    public class VaporStore
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             var balance = double.Parse(Console.ReadLine());
 
-            var input = Console.ReadLine();
-
             double moneySpent = 0;
 
-            while (input != "Game Time")
+            string input;
+            while ((input = Console.ReadLine()) != "Game Time")
             {
                 if (input == "OutFall 4")
                 {
@@ -102,7 +101,6 @@ namespace _02.VaporStore
                     Console.WriteLine("Out of money!");
                     return;
                 }
-                input = Console.ReadLine();
             }
             Console.WriteLine($"Total spent: ${moneySpent:F2}. Remaining: ${balance:F2}");
         }

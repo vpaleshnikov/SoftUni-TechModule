@@ -2,67 +2,41 @@
 
 namespace _06.TheatrePromotion
 {
-    class TheatrePromotion
+    public class TheatrePromotion
     {
-        static void Main()
+        public static void Main()
         {
-            var day = Console.ReadLine().ToLower();
-            var age = int.Parse(Console.ReadLine());
-            var price = 0;
+            var dayInput = Console.ReadLine().ToLower();
+            var ageInput = int.Parse(Console.ReadLine());
 
-            if (day == "weekday")
+            var price = 0.00;
+
+            var isYoungstersCategory = 0 <= ageInput && ageInput <= 18;
+            var isAdultsCategory = 18 < ageInput && ageInput <= 64;
+            var isEldersCategory = 64 < ageInput && ageInput <= 122;
+
+            switch (dayInput)
             {
-                if (age >= 0 && age <= 18)
-                {
-                    price = 12;
-                }
-                else if (age > 18 && age <= 64)
-                {
-                    price = 18;
-                }
-                else if (age > 64 && age <= 122)
-                {
-                    price = 12;
-                }
+                case "weekday":
+                    if (isYoungstersCategory || isEldersCategory) { price = 12; }
+                    else if (isAdultsCategory) { price = 18; }
+                    break;
+
+                case "weekend":
+                    if (isYoungstersCategory || isEldersCategory) { price = 15; }
+                    else if (isAdultsCategory) { price = 20; }
+                    break;
+
+                case "holiday":
+                    if (isYoungstersCategory) { price = 5; }
+                    else if (isAdultsCategory) { price = 12; }
+                    else if (isEldersCategory) { price = 10; }
+                    break;
             }
-            else if(day == "weekend")
-            {
-                if (age >= 0 && age <= 18)
-                {
-                    price = 15;
-                }
-                else if (age > 18 && age <= 64)
-                {
-                    price = 20;
-                }
-                else if (age > 64 && age <= 122)
-                {
-                    price = 15;
-                }
-            }
-            else if (day == "holiday")
-            {
-                if (age >= 0 && age <= 18)
-                {
-                    price = 5;
-                }
-                else if (age > 18 && age <= 64)
-                {
-                    price = 12;
-                }
-                else if (age > 64 && age <= 122)
-                {
-                    price = 10;
-                }
-            }
-            if (price > 0)
-            {
-                Console.WriteLine($"{price}$");
-            }
-            else
-            {
-                Console.WriteLine("Error!");
-            }
+
+            var result = price > 0 ? $"{price}$" : "Error!";
+
+            Console.WriteLine(result);
         }
     }
 }

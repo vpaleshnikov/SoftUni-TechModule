@@ -2,14 +2,12 @@
 
 namespace _06.DNASequences
 {
-    class DNASequences
+    public class DNASequences
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             int n = int.Parse(Console.ReadLine());
-
-            int sum = 0;
-
+            
             for (int i = 1; i <= 4; i++)
             {
                 for (int j = 1; j <= 4; j++)

@@ -2,18 +2,19 @@
 
 namespace _11.OddNumber
 {
-    class OddNumber
+    public class OddNumber
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            var number = int.Parse(Console.ReadLine());
-
-            while (number % 2 == 0)
+            var numberInput = int.Parse(Console.ReadLine());
+            
+            while (numberInput % 2 == 0)
             {
                 Console.WriteLine("Please write an odd number.");
-                number = int.Parse(Console.ReadLine());
+                numberInput = int.Parse(Console.ReadLine());
             }
-            Console.WriteLine($"The number is: {Math.Abs(number)}");
+
+            Console.WriteLine($"The number is: {Math.Abs(numberInput)}");
         }
     }
 }

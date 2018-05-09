@@ -6,37 +6,53 @@ namespace _04.MonthPrinter
     {
         static void Main(string[] args)
         {
-            var month = int.Parse(Console.ReadLine());
-            switch (month)
+            var monthNumber = int.Parse(Console.ReadLine());
+
+            var result = string.Empty;
+
+            switch (monthNumber)
             {
-                case 1: Console.WriteLine("January");
+                case 1:
+                    result = "January";
                     break;
-                case 2: Console.WriteLine("February");
+                case 2:
+                    result = "February";
                     break;
-                case 3: Console.WriteLine("March");
+                case 3:
+                    result = "March";
                     break;
-                case 4: Console.WriteLine("April");
+                case 4:
+                    result = "April";
                     break;
-                case 5: Console.WriteLine("May");
+                case 5:
+                    result = "May";
                     break;
-                case 6: Console.WriteLine("June");
+                case 6:
+                    result = "June";
                     break;
-                case 7: Console.WriteLine("July");
+                case 7:
+                    result = "July";
                     break;
-                case 8: Console.WriteLine("August");
+                case 8:
+                    result = "August";
                     break;
-                case 9: Console.WriteLine("September");
+                case 9:
+                    result = "September";
                     break;
-                case 10: Console.WriteLine("October");
+                case 10:
+                    result = "October";
                     break;
-                case 11: Console.WriteLine("November");
+                case 11:
+                    result = "November";
                     break;
-                case 12: Console.WriteLine("December");
+                case 12:
+                    result = "December";
                     break;
                 default:
-                    Console.WriteLine("Error!");
+                    result = "Error!";
                     break;
             }
+            Console.WriteLine(result);
         }
     }
 }
